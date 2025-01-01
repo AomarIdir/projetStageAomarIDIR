@@ -1,0 +1,358 @@
+{
+    "questions": [
+        {
+            "model": "Questions",
+            "pk": 1,
+            "fields": {
+                "qst": "Quelle est la formule de l'aire d'un cercle ?",
+                "categorie": "Math\u00c3\u00a9matiques"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 2,
+            "fields": {
+                "qst": "Quel est le r\u00c3\u00a9sultat de l'addition de 0 et de tout nombre ?",
+                "categorie": "Math\u00c3\u00a9matiques"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 3,
+            "fields": {
+                "qst": "Quelle est la somme des angles d'un triangle ?",
+                "categorie": "Math\u00c3\u00a9matiques"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 4,
+            "fields": {
+                "qst": "Comment s'appelle la m\u00c3\u00a9thode permettant de r\u00c3\u00a9soudre une \u00c3\u00a9quation du second degr\u00c3\u00a9 ?",
+                "categorie": "Math\u00c3\u00a9matiques"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 5,
+            "fields": {
+                "qst": "Que signifie \u00cf\u20ac en math\u00c3\u00a9matiques ?",
+                "categorie": "Math\u00c3\u00a9matiques"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 6,
+            "fields": {
+                "qst": "Quelle est la d\u00c3\u00a9riv\u00c3\u00a9e de x\u00c2\u00b2 ?",
+                "categorie": "Math\u00c3\u00a9matiques"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 7,
+            "fields": {
+                "qst": "Si x = 3, quel est le r\u00c3\u00a9sultat de 2x + 5 ?",
+                "categorie": "Math\u00c3\u00a9matiques"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 8,
+            "fields": {
+                "qst": "Quel est le produit de 12 et 8 ?",
+                "categorie": "Math\u00c3\u00a9matiques"
+            }
+        }
+    ],
+    "reponses": [
+        {
+            "model": "Reponses",
+            "pk": 1,
+            "fields": {
+                "reponse": "\u00cf\u20ac \u00c3\u2014 r\u00c2\u00b2",
+                "qst_id": 1,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 2,
+            "fields": {
+                "reponse": "2 \u00c3\u2014 \u00cf\u20ac \u00c3\u2014 r",
+                "qst_id": 1,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 3,
+            "fields": {
+                "reponse": "r \u00c3\u2014 r",
+                "qst_id": 1,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 4,
+            "fields": {
+                "reponse": "\u00cf\u20ac \u00c3\u2014 r \u00c3\u2014 h",
+                "qst_id": 1,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 5,
+            "fields": {
+                "reponse": "Le nombre reste inchang\u00c3\u00a9",
+                "qst_id": 2,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 6,
+            "fields": {
+                "reponse": "Le r\u00c3\u00a9sultat est toujours 0",
+                "qst_id": 2,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 7,
+            "fields": {
+                "reponse": "Le r\u00c3\u00a9sultat est toujours 1",
+                "qst_id": 2,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 8,
+            "fields": {
+                "reponse": "Le r\u00c3\u00a9sultat est toujours n\u00c3\u00a9gatif",
+                "qst_id": 2,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 9,
+            "fields": {
+                "reponse": "360\u00c2\u00b0",
+                "qst_id": 3,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 10,
+            "fields": {
+                "reponse": "90\u00c2\u00b0",
+                "qst_id": 3,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 11,
+            "fields": {
+                "reponse": "180\u00c2\u00b0",
+                "qst_id": 3,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 12,
+            "fields": {
+                "reponse": "270\u00c2\u00b0",
+                "qst_id": 3,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 13,
+            "fields": {
+                "reponse": "La m\u00c3\u00a9thode de Newton",
+                "qst_id": 4,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 14,
+            "fields": {
+                "reponse": "La m\u00c3\u00a9thode de substitution",
+                "qst_id": 4,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 15,
+            "fields": {
+                "reponse": "La m\u00c3\u00a9thode du discriminant",
+                "qst_id": 4,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 16,
+            "fields": {
+                "reponse": "La m\u00c3\u00a9thode de multiplication",
+                "qst_id": 4,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 17,
+            "fields": {
+                "reponse": "Le p\u00c3\u00a9rim\u00c3\u00a8tre d'un cercle",
+                "qst_id": 5,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 18,
+            "fields": {
+                "reponse": "La constante d'Archim\u00c3\u00a8de, environ 3.14159",
+                "qst_id": 5,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 19,
+            "fields": {
+                "reponse": "La surface d'un triangle",
+                "qst_id": 5,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 20,
+            "fields": {
+                "reponse": "La racine carr\u00c3\u00a9e de 2",
+                "qst_id": 5,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 21,
+            "fields": {
+                "reponse": "2x",
+                "qst_id": 6,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 22,
+            "fields": {
+                "reponse": "x",
+                "qst_id": 6,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 23,
+            "fields": {
+                "reponse": 1,
+                "qst_id": 6,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 24,
+            "fields": {
+                "reponse": "x\u00c2\u00b2",
+                "qst_id": 6,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 25,
+            "fields": {
+                "reponse": 11,
+                "qst_id": 7,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 26,
+            "fields": {
+                "reponse": 8,
+                "qst_id": 7,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 27,
+            "fields": {
+                "reponse": 9,
+                "qst_id": 7,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 28,
+            "fields": {
+                "reponse": 7,
+                "qst_id": 7,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 29,
+            "fields": {
+                "reponse": 96,
+                "qst_id": 8,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 30,
+            "fields": {
+                "reponse": 104,
+                "qst_id": 8,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 31,
+            "fields": {
+                "reponse": 100,
+                "qst_id": 8,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 32,
+            "fields": {
+                "reponse": 88,
+                "qst_id": 8,
+                "est_correct": false
+            }
+        }
+    ]
+}

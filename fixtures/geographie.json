@@ -1,0 +1,358 @@
+{
+    "questions": [
+        {
+            "model": "Questions",
+            "pk": 1,
+            "fields": {
+                "qst": "Quelle est la capitale de la France ?",
+                "categorie": "G\u00c3\u00a9ographie"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 2,
+            "fields": {
+                "qst": "Quel est le plus long fleuve de France ?",
+                "categorie": "G\u00c3\u00a9ographie"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 3,
+            "fields": {
+                "qst": "Quel massif montagneux s\u00c3\u00a9pare la France et l'Espagne ?",
+                "categorie": "G\u00c3\u00a9ographie"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 4,
+            "fields": {
+                "qst": "Quelle mer borde la r\u00c3\u00a9gion PACA (Provence-Alpes-C\u00c3\u00b4te d'Azur) ?",
+                "categorie": "G\u00c3\u00a9ographie"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 5,
+            "fields": {
+                "qst": "Quelle est la plus grande \u00c3\u00aele de France ?",
+                "categorie": "G\u00c3\u00a9ographie"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 6,
+            "fields": {
+                "qst": "Quel est le plus haut sommet de France ?",
+                "categorie": "G\u00c3\u00a9ographie"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 7,
+            "fields": {
+                "qst": "Dans quelle r\u00c3\u00a9gion se trouve le ch\u00c3\u00a2teau de Versailles ?",
+                "categorie": "G\u00c3\u00a9ographie"
+            }
+        },
+        {
+            "model": "Questions",
+            "pk": 8,
+            "fields": {
+                "qst": "Quelle est la plus grande ville de France apr\u00c3\u00a8s Paris ?",
+                "categorie": "G\u00c3\u00a9ographie"
+            }
+        }
+    ],
+    "reponses": [
+        {
+            "model": "Reponses",
+            "pk": 1,
+            "fields": {
+                "reponse": "Lyon",
+                "qst_id": 1,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 2,
+            "fields": {
+                "reponse": "Paris",
+                "qst_id": 1,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 3,
+            "fields": {
+                "reponse": "Marseille",
+                "qst_id": 1,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 4,
+            "fields": {
+                "reponse": "Toulouse",
+                "qst_id": 1,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 5,
+            "fields": {
+                "reponse": "La Loire",
+                "qst_id": 2,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 6,
+            "fields": {
+                "reponse": "Le Rh\u00c3\u00b4ne",
+                "qst_id": 2,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 7,
+            "fields": {
+                "reponse": "La Seine",
+                "qst_id": 2,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 8,
+            "fields": {
+                "reponse": "Le Danube",
+                "qst_id": 2,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 9,
+            "fields": {
+                "reponse": "Les Alpes",
+                "qst_id": 3,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 10,
+            "fields": {
+                "reponse": "Les Pyr\u00c3\u00a9n\u00c3\u00a9es",
+                "qst_id": 3,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 11,
+            "fields": {
+                "reponse": "Le Massif Central",
+                "qst_id": 3,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 12,
+            "fields": {
+                "reponse": "Le Jura",
+                "qst_id": 3,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 13,
+            "fields": {
+                "reponse": "La mer M\u00c3\u00a9diterran\u00c3\u00a9e",
+                "qst_id": 4,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 14,
+            "fields": {
+                "reponse": "La mer du Nord",
+                "qst_id": 4,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 15,
+            "fields": {
+                "reponse": "L'Atlantique",
+                "qst_id": 4,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 16,
+            "fields": {
+                "reponse": "La mer Noire",
+                "qst_id": 4,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 17,
+            "fields": {
+                "reponse": "La Corse",
+                "qst_id": 5,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 18,
+            "fields": {
+                "reponse": "La R\u00c3\u00a9union",
+                "qst_id": 5,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 19,
+            "fields": {
+                "reponse": "La Guadeloupe",
+                "qst_id": 5,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 20,
+            "fields": {
+                "reponse": "Martinique",
+                "qst_id": 5,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 21,
+            "fields": {
+                "reponse": "Le Mont Blanc",
+                "qst_id": 6,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 22,
+            "fields": {
+                "reponse": "Le Mont Ventoux",
+                "qst_id": 6,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 23,
+            "fields": {
+                "reponse": "Le Mont Aiguille",
+                "qst_id": 6,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 24,
+            "fields": {
+                "reponse": "Le Mont Gerbier de Jonc",
+                "qst_id": 6,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 25,
+            "fields": {
+                "reponse": "\u00c3\u017dle-de-France",
+                "qst_id": 7,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 26,
+            "fields": {
+                "reponse": "Provence-Alpes-C\u00c3\u00b4te d'Azur",
+                "qst_id": 7,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 27,
+            "fields": {
+                "reponse": "Normandie",
+                "qst_id": 7,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 28,
+            "fields": {
+                "reponse": "Bretagne",
+                "qst_id": 7,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 29,
+            "fields": {
+                "reponse": "Marseille",
+                "qst_id": 8,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 30,
+            "fields": {
+                "reponse": "Lyon",
+                "qst_id": 8,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 31,
+            "fields": {
+                "reponse": "Toulouse",
+                "qst_id": 8,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "Reponses",
+            "pk": 32,
+            "fields": {
+                "reponse": "Lille",
+                "qst_id": 8,
+                "est_correct": false
+            }
+        }
+    ]
+}

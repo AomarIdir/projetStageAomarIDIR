@@ -1,0 +1,114 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    {% tailwind_css %}
+  </head>
+  <body>
+    <div class="min-h-screen bg-white flex">
+      <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+        {% if cree %}
+        <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-200 dark:bg-gray-800 dark:text-green-400" role="alert" id="message">
+          <span class="font-medium">Success alert!</span> {{ cree }}
+        </div>
+        {%endif%}
+        <div class="mx-auto w-full max-w-sm">
+        <div>
+          <h2 class="mt-6 text-3xl leading-9 font-extrabold text-gray-900">
+            Connectez-vous à votre compte
+          </h2>
+          <p class="mt-2 text-sm leading-5 text-gray-600 max-w">
+            Ou
+            <a href="{% url 'inscription' %}" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150">
+              inscrivez-vous ici
+            </a>
+          </p>
+        </div>
+  
+        <div class="mt-8">
+  
+          <div class="mt-6">
+            <form action="{% url 'connexion' %}" method="POST">
+              {% csrf_token %}
+              <div>
+                <label for="email" class="block text-sm font-medium leading-5 text-gray-700">
+                  Adresse email
+                </label>
+                <div class="mt-1 rounded-md shadow-sm">
+                  <input id="email" name="email" type="email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                </div>
+              </div>
+  
+              <div class="mt-6">
+                <label for="password" class="block text-sm font-medium leading-5 text-gray-700">
+                  Mot de passe
+                </label>
+                <div class="mt-1 rounded-md shadow-sm">
+                  <input id="password" name="password" type="password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                </div>
+              </div>
+  
+              <div class="mt-6 flex items-center justify-between">
+                <div class="flex items-center">
+                  <input id="remember_me" type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+                  <label for="remember_me" class="ml-2 block text-sm leading-5 text-gray-900">
+                    Se souvenir de moi
+                  </label>
+                </div>
+  
+                <div class="text-sm leading-5">
+                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150">
+                    Mot de passe oublié ?
+                  </a>
+                </div>
+              </div>
+  
+              <div class="mt-6">
+                <span class="block w-full rounded-md shadow-sm">
+                  <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+                    Se connecter
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center space-x-4 mb-6 mt-8">
+        <hr class="flex-1 border-gray-300">
+        <span class="text-sm text-gray-500">Ou continuer avec</span>
+        <hr class="flex-1 border-gray-300">
+        </div>
+        
+        <button class="mt-8 flex items-center justify-center w-full border border-gray-300 p-3 rounded hover:bg-gray-100 transition">
+            <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                <path fill="#EA4335" d="M24 9.5c3.69 0 6.67 1.26 9.09 3.53l6.82-6.82C36.03 2.78 30.61 0 24 0 14.73 0 6.91 5.4 3.06 13.22l7.79 6.06C12.92 13.13 18.06 9.5 24 9.5z"/>
+                <path fill="#34A853" d="M46.5 24c0-1.49-.14-2.92-.39-4.31H24v8.14h12.8c-.55 2.87-2.1 5.35-4.47 7.01v5.86h7.2C42.86 37.63 46.5 31.3 46.5 24z"/>
+                <path fill="#FBBC05" d="M10.85 28.9A9.35 9.35 0 019 24c0-1.7.43-3.3 1.15-4.69V13.5H3.06A23.9 23.9 0 000 24c0 3.63.84 7.06 2.34 10.13l7.51-5.23z"/>
+                <path fill="#4285F4" d="M24 48c6.48 0 11.91-2.15 15.88-5.84l-7.2-5.86c-2.05 1.37-4.66 2.17-8.68 2.17-5.94 0-10.97-3.84-12.77-9.14H3.06l-7.8 6.06C6.91 42.6 14.73 48 24 48z"/>
+                <path fill="none" d="M0 0h48v48H0z"/>
+              </svg>
+              <span class="text-gray-700 font-medium">Google</span>
+            </button>
+        {% if erreur %}
+        <div class="mt-2 font-extrabold text-red-600" id="message">{{ erreur }}</div>
+        {% endif %}
+      </div>
+    <div class="hidden lg:block relative w-0 flex-1">
+      <img class="absolute inset-0 h-full w-full object-cover" src="{% static 'images/bureau-ia.png' %}" alt="" />
+    </div>
+  </div>  
+  <script>
+    // Délai avant de masquer le message en millisecondes
+    const messageBox = document.getElementById('message');
+    setTimeout(function() {
+        messageBox.style.display = 'none';  // Masquer le message
+    }, 5000);  // 5000 millisecondes = 5 secondes
+</script>
+</body>
+</html>

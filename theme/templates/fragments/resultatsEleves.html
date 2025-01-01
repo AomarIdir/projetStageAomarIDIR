@@ -1,0 +1,75 @@
+{% extends 'dashboardAdmin.html'%}
+{% block content %}
+<div class="flex flex-col m-10">
+  <div class="px-4 sm:px-6 lg:px-8">
+    <div class="sm:flex sm:items-center">
+        <div class="sm:flex-auto">
+            <h1 class="text-base font-semibold leading-6 text-gray-900">Résultats des élèves inscrits</h1>
+            <p class="mt-2 text-sm text-gray-700 pb-4">Suprimmer les historiques des tests.</p>
+        </div>
+    </div>
+    <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+      <div class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"></th>
+              <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Prénom
+              </th>
+              <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Nom
+              </th>
+              <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Categories
+              </th>              
+              <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Scores (%)
+              </th>              
+              <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Date du test
+              </th>
+              <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-right text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Actions
+              </th>
+            </tr>
+          </thead>
+          {% for i in page_obj %}
+          <tbody class="bg-white">
+            <tr>
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                <div class="flex items-center">
+                <svg class="h-6 w-6 shrink-0 text-gray-400 group-hover:text-purple-900 transition-colors duration-200" 
+                    fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></circle>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l3 3"></path>
+                </svg> 
+                </div>
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500" id="" name="{{i.eleves.first_name}}">
+                {{i.eleves.first_name}}
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500" id="" name="{{i.eleves.last_name}}">
+                {{i.eleves.last_name}}
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500 " id="" name="{{i.lacategorie.categorie}}">
+                {{i.lacategorie.categorie}}
+              </td>              
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500 " id="" name="{{i.score}}">
+                {{i.score}}
+              </td>              
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500 " id="" name="{{i.date_du_test}}">
+                {{i.date_du_test}} 
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
+                <a href="{% url 'suppResults_view' id=i.id %}" class="text-red-600 hover:text-red-900 focus:outline-none focus:underline">Supprimer</a>
+              </td>
+            </tr>
+          </tbody>
+          {% endfor%}
+        </table>
+      </div>
+    </div>
+    {% include 'fragments/pagination.html' %}
+  </div>
+  {%endblock%}

@@ -1,0 +1,40 @@
+{% extends 'pageTests.html' %}
+{% block content %}
+<div class="bg-white shadow-lg rounded-lg max-w-4xl mx-auto p-6 m-4 border border-gray-200">
+    {% for fb in feedback %}
+        <div class="mb-6">
+            <blockquote class="text-lg italic font-semibold text-left text-gray-900 dark:text-white mb-4">
+                <p><strong>{{ forloop.counter }}.</strong> {{ fb.qst.qst }}</p>
+            </blockquote>
+            <ul role="list" class="divide-y divide-gray-300 dark:divide-gray-600">
+                {% for rsp in fb.qst.reponses_set.all  %}
+                <li class="w-full py-3 flex items-center">
+                    <label for="{{ fb.qst.id }}-{{ rsp.id }}" class="w-full flex items-center cursor-pointer">
+                        <input id="{{ fb.qst.id }}-{{ rsp.id }}" type="radio" value="{{ rsp.id }}" name="{{ fb.qst.id }}" disabled
+                               class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                               {% if rsp.id == fb.rsp.id %} checked {% endif %}>
+                        <span class="ml-3 text-base font-medium text-gray-900 dark:text-gray-300 
+                            {% if rsp.id == fb.rsp_correct.id %} text-green-600 {% elif rsp.id == fb.rsp.id and not fb.est_correct %} text-red-600 {% endif %}">
+                            {{ rsp.reponse }}
+                        </span>
+                    </label>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+    
+    <div class="mt-6 text-center">
+        <div class="mt-6 text-center">
+            <button type="button" onclick="window.location.href= versliste" class="w-full relative inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-zinc-900 text-white font-semibold px-6 py-3 sm:px-5 sm:py-2 sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-zinc-600 dark:text-white dark:hover:bg-zinc-500 dark:focus:ring-offset-zinc-700 text-center">
+                Soumettre
+            </button>
+        </div>
+        <p class="text-xl font-semibold">Score: {{ score }}%</p>
+    </div>
+</div>
+<script>
+    const versliste="{% url 'listeTests' %}"
+</script>
+
+{% endblock %}

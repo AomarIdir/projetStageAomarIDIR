@@ -1,0 +1,26 @@
+{% extends 'dashboardClient.html'%}
+{% block content%}
+
+<div class="bg-white shadow overflow-hidden sm:rounded-lg max-w-4xl mx-auto">
+    <ul role="list" class="divide-y divide-gray-200">
+        {%for i in tests%}
+      <li>
+        <a href="pageTests/{{i.id}}" class="flex items-center py-4 px-6 hover:bg-gray-50">
+          <div class="h-16 w-16 flex items-center justify-center bg-gray-200 rounded-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-700" viewBox="0 0 24 24" fill="purple">
+                  <path d="M21 4a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v16a1 1 0 0 0 1.5.87A3.48 3.48 0 0 1 6 20h12a3.48 3.48 0 0 1 1.5.87A1 1 0 0 0 21 20V4zm-9 0h6a1 1 0 0 1 1 1v12h-7V4zm-2 13H4V5a1 1 0 0 1 1-1h6v13z" />
+              </svg>
+          </div>
+          <div class="ml-4 flex-1">
+            <p class="text-lg font-bold text-gray-900" name="{{i.categorie}}">{{i.categorie}}</p>
+          </div>
+          <div class="text-right">
+            <p class="text-sm text-gray-700" ></p>
+          </div>
+        </a>
+      </li>
+      {%endfor%}
+    </ul>
+    
+</div>
+{%endblock%}  

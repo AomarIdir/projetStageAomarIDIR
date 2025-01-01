@@ -1,0 +1,104 @@
+{% extends 'dashboardAdmin.html' %}
+{% block content %}
+<x-layout>
+    
+    <div class="grid grid-cols-1 gap-x-8 gap-y-8 pt-10 md:grid-cols-3 p-12">
+        <div class="px-4 sm:px-0">
+            <h2 class="text-base font-semibold leading-7 text-gray-900">Élève</h2>
+            <p class="mt-1 text-sm leading-6 text-gray-600">Modifier l'Élève</p>
+        </div>
+        <form method="POST" action="{% url 'modifierEleves' %}" id="eleveForm"
+            class="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2">
+            {% csrf_token %}
+            <div class="px-4 py-6 sm:p-8">
+                <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+   
+                    <div class="sm:col-span-3 my-4">
+                        <label for="nom" class="block text-sm font-medium leading-6 text-gray-900">Nom</label>
+                        <div class="mt-2">
+                            <input type="text" name="last_name" id="nom" value="{{formulaire.last_name}}"
+                                class="block w-full rounded-md border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6">
+                            <span id="nomError" class="text-red-500"></span>
+                        </div>
+                    </div>
+
+                    {% if formulaire %}
+                    <input type="hidden" name="id" value="{{formulaire.id}}">
+                    <div class="sm:col-span-3 my-4">
+                        <label for="prenom" class="block text-sm font-medium leading-6 text-gray-900">Prénom</label>
+                        <div class="mt-2">
+                            <input type="text" name="first_name" id="prenom" value="{{formulaire.first_name}}"
+                                class="block w-full rounded-md border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6">
+                            <span id="prenomError" class="text-red-500"></span>
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3 my-4">
+                        <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                        <div class="mt-2">
+                            <input type="text" name="email" id="email" value="{{formulaire.email}}"
+                                class="block w-full rounded-md border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6">
+                            <span id="emailError" class="text-red-500"></span>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="flex items-center justify-end gap-x-6 border-t border-gray-900/10 px-4 py-4 sm:px-8">
+
+                    <button type="button" onclick="window.location.href= versliste"
+                        class="text-sm font-semibold leading-6 text-gray-900">Annuler</button>
+                    
+                    <button type="submit"
+                        class="rounded-md bg-purple-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600">Mise à jour</button>
+                </div>
+            </div>
+        </form>
+
+        <script>
+            const versliste = "{% url 'listeEleves' %}";
+
+            // Function to validate the form
+            function validateForm(event) {
+                let valid = true;
+
+                // Clear previous error messages
+                document.getElementById('nomError').innerText = '';
+                document.getElementById('prenomError').innerText = '';
+                document.getElementById('emailError').innerText = '';
+
+                // Validate Nom
+                const nom = document.getElementById('nom').value;
+                const nomRegex = /^[A-Za-zÀ-ÿ ]+$/;
+                if (!nomRegex.test(nom)) {
+                    document.getElementById('nomError').innerText = "Le nom ne doit contenir que des lettres et des espaces.";
+                    valid = false;
+                }
+
+                // Validate Prénom
+                const prenom = document.getElementById('prenom').value;
+                const prenomRegex = /^[A-Za-zÀ-ÿ ]+$/;
+                if (!prenomRegex.test(prenom)) {
+                    document.getElementById('prenomError').innerText = "Le prénom ne doit contenir que des lettres et des espaces.";
+                    valid = false;
+                }
+
+                // Validate Email
+                const email = document.getElementById('email').value;
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailRegex.test(email)) {
+                    document.getElementById('emailError').innerText = "L'email doit être valide.";
+                    valid = false;
+                }
+
+                if (!valid) {
+                    event.preventDefault(); // Prevent form submission if validation fails
+                }
+            }
+
+            // Add event listener for form submission
+            document.getElementById('eleveForm').addEventListener('submit', validateForm);
+        </script>
+    </div>
+</x-layout>
+
+{% endblock %}

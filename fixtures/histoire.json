@@ -1,0 +1,358 @@
+{
+    "Questions": [
+        {
+            "model": "projetstageaomar.questions",
+            "pk": 1,
+            "fields": {
+                "qst": "Quelle est la date de la prise de la Bastille ?",
+                "categorie": "Histoire"
+            }
+        },
+        {
+            "model": "projetstageaomar.questions",
+            "pk": 2,
+            "fields": {
+                "qst": "Qui était le roi de France au début de la Révolution française ?",
+                "categorie": "Histoire"
+            }
+        },
+        {
+            "model": "projetstageaomar.questions",
+            "pk": 3,
+            "fields": {
+                "qst": "En quelle année la République française a-t-elle été proclamée pour la première fois ?",
+                "categorie": "Histoire"
+            }
+        },
+        {
+            "model": "projetstageaomar.questions",
+            "pk": 4,
+            "fields": {
+                "qst": "Quel personnage est connu comme l’Empereur des Français ?",
+                "categorie": "Histoire"
+            }
+        },
+        {
+            "model": "projetstageaomar.questions",
+            "pk": 5,
+            "fields": {
+                "qst": "Qui a été sacré roi de France en 987, marquant le début de la dynastie capétienne ?",
+                "categorie": "Histoire"
+            }
+        },
+        {
+            "model": "projetstageaomar.questions",
+            "pk": 6,
+            "fields": {
+                "qst": "Quel événement est souvent considéré comme la fin de la guerre de Cent Ans ?",
+                "categorie": "Histoire"
+            }
+        },
+        {
+            "model": "projetstageaomar.questions",
+            "pk": 7,
+            "fields": {
+                "qst": "Qui était connu comme la Pucelle d’Orléans ?",
+                "categorie": "Histoire"
+            }
+        },
+        {
+            "model": "projetstageaomar.questions",
+            "pk": 8,
+            "fields": {
+                "qst": "En quelle année a eu lieu la bataille d’Austerlitz ?",
+                "categorie": "Histoire"
+            }
+        }
+    ],
+    "Reponses": [
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 1,
+            "fields": {
+                "reponse": "14 juillet 1789",
+                "qst_id": 1,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 2,
+            "fields": {
+                "reponse": "4 août 1790",
+                "qst_id": 1,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 3,
+            "fields": {
+                "reponse": "1er mai 1788",
+                "qst_id": 1,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 4,
+            "fields": {
+                "reponse": "22 septembre 1792",
+                "qst_id": 1,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 5,
+            "fields": {
+                "reponse": "Louis XIV",
+                "qst_id": 2,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 6,
+            "fields": {
+                "reponse": "Louis XV",
+                "qst_id": 2,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 7,
+            "fields": {
+                "reponse": "Louis XVI",
+                "qst_id": 2,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 8,
+            "fields": {
+                "reponse": "Louis XVII",
+                "qst_id": 2,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 9,
+            "fields": {
+                "reponse": "1789",
+                "qst_id": 3,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 10,
+            "fields": {
+                "reponse": "1792",
+                "qst_id": 3,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 11,
+            "fields": {
+                "reponse": "1799",
+                "qst_id": 3,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 12,
+            "fields": {
+                "reponse": "1804",
+                "qst_id": 3,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 13,
+            "fields": {
+                "reponse": "Napoléon Bonaparte",
+                "qst_id": 4,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 14,
+            "fields": {
+                "reponse": "Charles de Gaulle",
+                "qst_id": 4,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 15,
+            "fields": {
+                "reponse": "François Ier",
+                "qst_id": 4,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 16,
+            "fields": {
+                "reponse": "Louis-Philippe",
+                "qst_id": 4,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 17,
+            "fields": {
+                "reponse": "Charlemagne",
+                "qst_id": 5,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 18,
+            "fields": {
+                "reponse": "Hugues Capet",
+                "qst_id": 5,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 19,
+            "fields": {
+                "reponse": "Louis IX",
+                "qst_id": 5,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 20,
+            "fields": {
+                "reponse": "Clovis",
+                "qst_id": 5,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 21,
+            "fields": {
+                "reponse": "La bataille de Bouvines",
+                "qst_id": 6,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 22,
+            "fields": {
+                "reponse": "La bataille de Castillon",
+                "qst_id": 6,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 23,
+            "fields": {
+                "reponse": "La signature du traité de Verdun",
+                "qst_id": 6,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 24,
+            "fields": {
+                "reponse": "La mort de Jeanne d'Arc",
+                "qst_id": 6,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 25,
+            "fields": {
+                "reponse": "Catherine de Médicis",
+                "qst_id": 7,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 26,
+            "fields": {
+                "reponse": "Jeanne d'Arc",
+                "qst_id": 7,
+                "est_correct": true
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 27,
+            "fields": {
+                "reponse": "Louis XVI",
+                "qst_id": 7,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 28,
+            "fields": {
+                "reponse": "Marie Antoinette",
+                "qst_id": 7,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 29,
+            "fields": {
+                "reponse": "1805",
+                "qst_id": 8,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 30,
+            "fields": {
+                "reponse": "1804",
+                "qst_id": 8,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 31,
+            "fields": {
+                "reponse": "1806",
+                "qst_id": 8,
+                "est_correct": false
+            }
+        },
+        {
+            "model": "projetstageaomar.reponses",
+            "pk": 32,
+            "fields": {
+                "reponse": "1805",
+                "qst_id": 8,
+                "est_correct": true
+            }
+        }
+    ]
+}

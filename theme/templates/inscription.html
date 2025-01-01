@@ -1,0 +1,145 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    {% tailwind_css %}
+</head>
+<body>
+    <div class="min-h-screen flex items-center justify-center bg-gray-200 relative">
+        <div class="bg-white p-16 rounded shadow-2xl w-1/3 relative z-10">
+            <h2 class="text-3xl font-bold mb-2 text-gray-800">Créez votre compte</h2>
+            <a class="text-purple-600 mb-8 block" href="{% url 'index' %}">Ou se connecter</a>
+
+            <form class="space-y-5" method="post" id="signupForm">
+              {% csrf_token %}
+                <div>
+                    <label class="block mb-2 text-xs text-gray-500 uppercase font-bold">Prenom</label>
+                    <input 
+                        type="text" 
+                        name="prenom" 
+                        class="border border-gray-200 p-3 w-full rounded outline-none focus:ring-2 focus:ring-blue-600"
+                        minlength="2" 
+                        maxlength="30" 
+                        required 
+                        placeholder="Votre prénom">
+                    <span class="text-red-500 text-sm hidden" id="error-prenom">Veuillez entrer un prénom valide (sans caractères spéciaux, 2 à 30 caractères).</span>
+                </div>                
+                <div>
+                    <label class="block mb-2 text-xs text-gray-500 uppercase font-bold">Nom</label>
+                    <input 
+                        type="text" 
+                        name="nom" 
+                        class="border border-gray-200 p-3 w-full rounded outline-none focus:ring-2 focus:ring-blue-600"
+                        minlength="2" 
+                        maxlength="30" 
+                        required 
+                        placeholder="Votre nom">
+                    <span class="text-red-500 text-sm hidden" id="error-nom">Veuillez entrer un nom valide (sans caractères spéciaux, 2 à 30 caractères).</span>
+                </div>
+
+                <div>
+                    <label class="block mb-2 text-xs text-gray-500 uppercase font-bold">Adresse email</label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        class="border border-gray-200 p-3 w-full rounded outline-none focus:ring-2 focus:ring-blue-600"
+                        required 
+                        placeholder="email@example.com">
+                    <span class="text-red-500 text-sm hidden" id="error-email">Veuillez entrer une adresse email valide.</span>
+                </div>
+
+                <div>
+                    <label class="block mb-2 text-xs text-gray-500 uppercase font-bold">Mot de passe</label>
+                    <input 
+                        type="password" 
+                        name="mdp" 
+                        class="border border-gray-200 p-3 w-full rounded outline-none focus:ring-2 focus:ring-blue-600"
+                        minlength="6" 
+                        required 
+                        placeholder="Votre mot de passe">
+                    <span class="text-red-500 text-sm hidden" id="error-mdp">Le mot de passe doit contenir au moins 6 caractères.</span>
+                </div>
+
+                <div class="flex items-center">
+                    <input type="checkbox" id="agree" name="agree" class="form-checkbox h-5 w-5" value="1" required>
+                    <label for="agree" class="ml-2 text-gray-500">J'accepte les termes et conditions et la politique de confidentialité.</label>
+                </div>
+
+                {% if messageErreur %}
+                <div class="text-red-500 mt-2">{{ messageErreur }}</div>
+                {% endif %}
+
+                <button 
+                    class="block w-full bg-purple-700 hover:bg-purple-500 p-4 rounded text-white transition duration-300" 
+                    type="submit">
+                    S'inscrire
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            let valid = true;
+
+            // Regex pour vérifier uniquement les lettres et espaces
+            const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+
+            // Prénom
+            const prenom = document.querySelector("input[name='prenom']");
+            const prenomError = document.getElementById("error-prenom");
+            if (!nameRegex.test(prenom.value.trim()) || prenom.value.trim().length < 2 || prenom.value.trim().length > 30) {
+                prenomError.textContent = "Veuillez entrer un prénom valide (sans caractères spéciaux, 2 à 30 caractères).";
+                prenomError.classList.remove("hidden");
+                valid = false;
+            } else {
+                prenomError.classList.add("hidden");
+            }
+
+            // Nom
+            const nom = document.querySelector("input[name='nom']");
+            const nomError = document.getElementById("error-nom");
+            if (!nameRegex.test(nom.value.trim()) || nom.value.trim().length < 2 || nom.value.trim().length > 30) {
+                nomError.textContent = "Veuillez entrer un nom valide (sans caractères spéciaux, 2 à 30 caractères).";
+                nomError.classList.remove("hidden");
+                valid = false;
+            } else {
+                nomError.classList.add("hidden");
+            }
+
+            // Email
+            const email = document.querySelector("input[name='email']");
+            const emailError = document.getElementById("error-email");
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                emailError.textContent = "Veuillez entrer une adresse email valide.";
+                emailError.classList.remove("hidden");
+                valid = false;
+            } else {
+                emailError.classList.add("hidden");
+            }
+
+            // Mot de passe
+            const mdp = document.querySelector("input[name='mdp']");
+            const mdpError = document.getElementById("error-mdp");
+            if (mdp.value.trim().length < 6) {
+                mdpError.textContent = "Le mot de passe doit contenir au moins 6 caractères.";
+                mdpError.classList.remove("hidden");
+                valid = false;
+            } else {
+                mdpError.classList.add("hidden");
+            }
+
+            // Empêche l'envoi si invalid
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

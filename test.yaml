@@ -1,0 +1,717 @@
+---
+- model: projetStageAomar.categories
+  pk: 1
+  fields:
+    categorie: Mathématiques
+
+- model: projetStageAomar.categories
+  pk: 2
+  fields:
+    categorie: Histoire
+
+- model: projetStageAomar.categories
+  pk: 3
+  fields:
+    categorie: Géographie
+
+- model: projetStageAomar.questions
+  pk: 1
+  fields:
+    qst: Quelle est la formule de l'aire d'un cercle ?
+    categorie: 1
+    
+- model: projetStageAomar.questions
+  pk: 2
+  fields:
+    qst: Quel est le résultat de l'addition de 0 et de tout nombre ?
+    categorie: 1
+- model: projetStageAomar.questions
+  pk: 3
+  fields:
+    qst: Quelle est la somme des angles d'un triangle ?
+    categorie: 1
+- model: projetStageAomar.questions
+  pk: 4
+  fields:
+    qst: Comment s'appelle la méthode permettant de résoudre une équation du second
+      degré ?
+    categorie: 1
+- model: projetStageAomar.questions
+  pk: 5
+  fields:
+    qst: Que signifie π en 1 ?
+    categorie: 1
+- model: projetStageAomar.questions
+  pk: 6
+  fields:
+    qst: Quelle est la dérivée de x² ?
+    categorie: 1
+- model: projetStageAomar.questions
+  pk: 7
+  fields:
+    qst: Si x = 3, quel est le résultat de 2x + 5 ?
+    categorie: 1
+- model: projetStageAomar.questions
+  pk: 8
+  fields:
+    qst: Quel est le produit de 12 et 8 ?
+    categorie: 1
+- model: projetStageAomar.reponses
+  pk: 1
+  fields:
+    reponse: π × r²
+    qst_id: 1
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 2
+  fields:
+    reponse: 2 × π × r
+    qst_id: 1
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 3
+  fields:
+    reponse: r × r
+    qst_id: 1
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 4
+  fields:
+    reponse: π × r × h
+    qst_id: 1
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 5
+  fields:
+    reponse: Le nombre reste inchangé
+    qst_id: 2
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 6
+  fields:
+    reponse: Le résultat est toujours 0
+    qst_id: 2
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 7
+  fields:
+    reponse: Le résultat est toujours 1
+    qst_id: 2
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 8
+  fields:
+    reponse: Le résultat est toujours négatif
+    qst_id: 2
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 9
+  fields:
+    reponse: 360°
+    qst_id: 3
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 10
+  fields:
+    reponse: 90°
+    qst_id: 3
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 11
+  fields:
+    reponse: 180°
+    qst_id: 3
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 12
+  fields:
+    reponse: 270°
+    qst_id: 3
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 13
+  fields:
+    reponse: La méthode de Newton
+    qst_id: 4
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 14
+  fields:
+    reponse: La méthode de substitution
+    qst_id: 4
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 15
+  fields:
+    reponse: La méthode du discriminant
+    qst_id: 4
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 16
+  fields:
+    reponse: La méthode de multiplication
+    qst_id: 4
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 17
+  fields:
+    reponse: Le périmètre d'un cercle
+    qst_id: 5
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 18
+  fields:
+    reponse: La constante d'Archimède, environ 3.14159
+    qst_id: 5
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 19
+  fields:
+    reponse: La surface d'un triangle
+    qst_id: 5
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 20
+  fields:
+    reponse: La racine carrée de 2
+    qst_id: 5
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 21
+  fields:
+    reponse: 2x
+    qst_id: 6
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 22
+  fields:
+    reponse: x
+    qst_id: 6
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 23
+  fields:
+    reponse: 1
+    qst_id: 6
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 24
+  fields:
+    reponse: x²
+    qst_id: 6
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 25
+  fields:
+    reponse: 11
+    qst_id: 7
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 26
+  fields:
+    reponse: 8
+    qst_id: 7
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 27
+  fields:
+    reponse: 9
+    qst_id: 7
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 28
+  fields:
+    reponse: 7
+    qst_id: 7
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 29
+  fields:
+    reponse: 96
+    qst_id: 8
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 30
+  fields:
+    reponse: 104
+    qst_id: 8
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 31
+  fields:
+    reponse: 100
+    qst_id: 8
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 32
+  fields:
+    reponse: 88
+    qst_id: 8
+    est_correct: false
+- model: projetStageAomar.questions
+  pk: 9
+  fields:
+    qst: Quelle est la date de la prise de la Bastille ?
+    categorie: 2
+- model: projetStageAomar.questions
+  pk: 10
+  fields:
+    qst: Qui était le roi de France au début de la Révolution française ?
+    categorie: 2
+- model: projetStageAomar.questions
+  pk: 11
+  fields:
+    qst: En quelle année la République française a-t-elle été proclamée pour la
+      première fois ?
+    categorie: 2
+- model: projetStageAomar.questions
+  pk: 12
+  fields:
+    qst: Quel personnage est connu comme l’« Empereur des Français » ?
+    categorie: 2
+- model: projetStageAomar.questions
+  pk: 13
+  fields:
+    qst: Qui a été sacré roi de France en 987, marquant le début de la dynastie
+      capétienne ?
+    categorie: 2
+- model: projetStageAomar.questions
+  pk: 14
+  fields:
+    qst: Quel événement est souvent considéré comme la fin de la guerre de Cent Ans
+      ?
+    categorie: 2
+- model: projetStageAomar.questions
+  pk: 15
+  fields:
+    qst: Qui était connu comme la « Pucelle d’Orléans » ?
+    categorie: 2
+- model: projetStageAomar.questions
+  pk: 16
+  fields:
+    qst: En quelle année a eu lieu la bataille d’Austerlitz ?
+    categorie: 2
+- model: projetStageAomar.reponses
+  pk: 33
+  fields:
+    reponse: 14 juillet 1789
+    qst_id: 9
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 34
+  fields:
+    reponse: 4 août 1790
+    qst_id: 9
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 35
+  fields:
+    reponse: 1er mai 1788
+    qst_id: 9
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 36
+  fields:
+    reponse: 22 septembre 1792
+    qst_id: 9
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 37
+  fields:
+    reponse: Louis XIV
+    qst_id: 10
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 38
+  fields:
+    reponse: Louis XV
+    qst_id: 10
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 39
+  fields:
+    reponse: Louis XVI
+    qst_id: 10
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 40
+  fields:
+    reponse: Louis XVII
+    qst_id: 10
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 41
+  fields:
+    reponse: 1789
+    qst_id: 11
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 42
+  fields:
+    reponse: 1792
+    qst_id: 11
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 43
+  fields:
+    reponse: 1799
+    qst_id: 11
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 44
+  fields:
+    reponse: 1804
+    qst_id: 11
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 45
+  fields:
+    reponse: Napoléon Bonaparte
+    qst_id: 12
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 46
+  fields:
+    reponse: Charles de Gaulle
+    qst_id: 12
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 47
+  fields:
+    reponse: François Ier
+    qst_id: 12
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 48
+  fields:
+    reponse: Louis-Philippe
+    qst_id: 12
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 49
+  fields:
+    reponse: Charlemagne
+    qst_id: 13
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 50
+  fields:
+    reponse: Hugues Capet
+    qst_id: 13
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 51
+  fields:
+    reponse: Louis IX
+    qst_id: 13
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 52
+  fields:
+    reponse: Clovis
+    qst_id: 13
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 53
+  fields:
+    reponse: La bataille de Bouvines
+    qst_id: 14
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 54
+  fields:
+    reponse: La bataille de Castillon
+    qst_id: 14
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 55
+  fields:
+    reponse: La signature du traité de Verdun
+    qst_id: 14
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 56
+  fields:
+    reponse: La mort de Jeanne d'Arc
+    qst_id: 14
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 57
+  fields:
+    reponse: Catherine de Médicis
+    qst_id: 15
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 58
+  fields:
+    reponse: Jeanne d'Arc
+    qst_id: 15
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 59
+  fields:
+    reponse: Marie-Antoinette
+    qst_id: 15
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 60
+  fields:
+    reponse: Aliénor d’Aquitaine
+    qst_id: 15
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 61
+  fields:
+    reponse: 1805
+    qst_id: 16
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 62
+  fields:
+    reponse: 1812
+    qst_id: 16
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 63
+  fields:
+    reponse: 1799
+    qst_id: 16
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 64
+  fields:
+    reponse: 1815
+    qst_id: 16
+    est_correct: false
+- model: projetStageAomar.questions
+  pk: 17
+  fields:
+    qst: Quelle est la capitale de la France ?
+    categorie: 3
+- model: projetStageAomar.questions
+  pk: 18
+  fields:
+    qst: Quel est le plus long fleuve de France ?
+    categorie: 3
+- model: projetStageAomar.questions
+  pk: 19
+  fields:
+    qst: Quel massif montagneux sépare la France et l'Espagne ?
+    categorie: 3
+- model: projetStageAomar.questions
+  pk: 20
+  fields:
+    qst: Quelle mer borde la région PACA (Provence-Alpes-Côte d'Azur) ?
+    categorie: 3
+- model: projetStageAomar.questions
+  pk: 21
+  fields:
+    qst: Quelle est la plus grande île de France ?
+    categorie: 3
+- model: projetStageAomar.questions
+  pk: 22
+  fields:
+    qst: Quel est le plus haut sommet de France ?
+    categorie: 3
+- model: projetStageAomar.questions
+  pk: 23
+  fields:
+    qst: Dans quelle région se trouve le château de Versailles ?
+    categorie: 3
+- model: projetStageAomar.questions
+  pk: 24
+  fields:
+    qst: Quelle est la plus grande ville de France après Paris ?
+    categorie: 3
+- model: projetStageAomar.reponses
+  pk: 65
+  fields:
+    reponse: Lyon
+    qst_id: 17
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 66
+  fields:
+    reponse: Paris
+    qst_id: 17
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 67
+  fields:
+    reponse: Marseille
+    qst_id: 17
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 68
+  fields:
+    reponse: Toulouse
+    qst_id: 17
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 69
+  fields:
+    reponse: La Loire
+    qst_id: 18
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 70
+  fields:
+    reponse: Le Rhône
+    qst_id: 18
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 71
+  fields:
+    reponse: La Seine
+    qst_id: 18
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 72
+  fields:
+    reponse: Le Danube
+    qst_id: 18
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 73
+  fields:
+    reponse: Les Alpes
+    qst_id: 19
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 74
+  fields:
+    reponse: Les Pyrénées
+    qst_id: 19
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 75
+  fields:
+    reponse: Le Massif Central
+    qst_id: 19
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 76
+  fields:
+    reponse: Le Jura
+    qst_id: 19
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 77
+  fields:
+    reponse: La mer Méditerranée
+    qst_id: 20
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 78
+  fields:
+    reponse: La mer du Nord
+    qst_id: 20
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 79
+  fields:
+    reponse: L'Atlantique
+    qst_id: 20
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 80
+  fields:
+    reponse: La mer Noire
+    qst_id: 20
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 81
+  fields:
+    reponse: La Corse
+    qst_id: 21
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 82
+  fields:
+    reponse: La Réunion
+    qst_id: 21
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 83
+  fields:
+    reponse: La Guadeloupe
+    qst_id: 21
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 84
+  fields:
+    reponse: Martinique
+    qst_id: 21
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 85
+  fields:
+    reponse: Le Mont Blanc
+    qst_id: 22
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 86
+  fields:
+    reponse: Le Mont Ventoux
+    qst_id: 22
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 87
+  fields:
+    reponse: Le Mont Aiguille
+    qst_id: 22
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 88
+  fields:
+    reponse: Le Mont Gerbier de Jonc
+    qst_id: 22
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 89
+  fields:
+    reponse: Île-de-France
+    qst_id: 23
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 90
+  fields:
+    reponse: Provence-Alpes-Côte d'Azur
+    qst_id: 23
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 91
+  fields:
+    reponse: Normandie
+    qst_id: 23
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 92
+  fields:
+    reponse: Bretagne
+    qst_id: 23
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 93
+  fields:
+    reponse: Marseille
+    qst_id: 24
+    est_correct: true
+- model: projetStageAomar.reponses
+  pk: 94
+  fields:
+    reponse: Lyon
+    qst_id: 24
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 95
+  fields:
+    reponse: Toulouse
+    qst_id: 24
+    est_correct: false
+- model: projetStageAomar.reponses
+  pk: 96
+  fields:
+    reponse: Lille
+    qst_id: 24
+    est_correct: false
