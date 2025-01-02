@@ -4,7 +4,7 @@
 <br/>
 
 > [!TIP]
-> modifier la configuration de la base de données sur sittings.py <br/><br/>
+> modifier la configuration de la base de données sur settings.py <br/><br/>
 >myenv\Scripts\activate               # <sub> allumer l'environnement virtuel </sub> <br/><br/>  
 >python manage.py makemigrations projetStageAomar      \
 >python manage.py migrate  			    #<sub> creation de la base de données </sub> <br/><br/>
